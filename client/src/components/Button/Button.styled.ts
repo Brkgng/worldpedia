@@ -20,4 +20,9 @@ export const ButtonStyled = styled.button<Props>`
           background-color: #fff;
           border: 2px solid ${bgColor || 'var(--orange)'};
         `}
+
+  // Mobile
+  @media screen and (max-width: 500px) {
+    width: ${({ width }) => (width ? `calc(${width} - 40px)` : '160px')};
+  }
 `;

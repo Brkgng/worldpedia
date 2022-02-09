@@ -12,6 +12,12 @@ const CircleStyled = styled.span<Props>`
   width: ${(props) => props.size}px;
   background-color: ${(props) => props.color || 'var(--lightblue)'};
   z-index: -1;
+
+  // Mobile
+  @media screen and (max-width: 500px) {
+    height: ${(props) => `calc(${props.size}px - 30px)`};
+    width: ${(props) => `calc(${props.size}px - 30px)`};
+  }
 `;
 
 export default CircleStyled;
