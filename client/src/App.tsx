@@ -1,11 +1,17 @@
 import React from 'react';
+// Components
+import Home from './pages/Home/Home';
+// Styles
+import { GlobalStyle } from './GlobalStyle';
+import { Container } from './App.styled';
 
-function App() {
-    return (
-        <div>
-            <h1>App</h1>
-        </div>
-    );
-}
+const App: React.FC = () => {
+  return (
+    <Container>
+      <Home />
+      <GlobalStyle />
+    </Container>
+  );
+};
 
 export default App;

@@ -7,13 +7,14 @@ export const GlobalStyle = createGlobalStyle`
 		--fontSmall: 1rem;
 		--fontMed: 1.2rem;
 		--fontBig: 1.5rem;
-		--fontSuperBig: 2.5rem;
+		--fontBigger: 2.5rem;
+		--fontSuperBig: 3.5rem;
 	}
 
 	* {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		font-family: "Montserrat", sans-serif;
+		font-family: "Quicksand", sans-serif;
 	}
 `;
