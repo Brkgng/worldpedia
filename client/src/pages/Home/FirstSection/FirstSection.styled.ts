@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import world from '../../assets/world.png';
+import world from '../../../assets/world.png';
+import circle3d from '../../../assets/circle3d.png';
 
 export const Content = styled.div`
   max-width: 600px;
@@ -11,16 +12,6 @@ export const Content = styled.div`
 
   @media screen and (max-width: 1176px) {
     margin-top: 6vh;
-  }
-  // Tablet
-  @media screen and (max-width: 900px) {
-    /* width: 150px; */
-    /* height: 150px; */
-  }
-
-  // Mobile
-  @media screen and (max-width: 500px) {
-    /* display: none; */
   }
 `;
 
@@ -38,6 +29,16 @@ export const Text = styled.div`
     font-size: var(--fontBig);
     font-weight: 500;
     margin-bottom: 9px;
+  }
+
+  @media screen and (max-width: 980px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: var(--fontMed);
+    }
   }
 
   // Mobile
@@ -59,7 +60,11 @@ export const ButtonWrapper = styled.div`
   max-width: 550px;
 `;
 
-export const Circle3D = styled.img`
+export const Circle3D = styled.div`
+  background: url(${circle3d}) no-repeat;
+  background-size: contain;
+  width: 265px;
+  height: 248px;
   position: absolute;
   top: 0;
   right: 0;
@@ -71,7 +76,7 @@ export const Circle3D = styled.img`
   }
 
   // Tablet
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1176px) {
     width: 150px;
     height: 150px;
   }
@@ -106,8 +111,7 @@ export const World = styled.div`
     background-size: 340px, cover;
   }
 
-  // Mobile
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `;
