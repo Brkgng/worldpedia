@@ -1,14 +1,26 @@
 import React from 'react';
-// Components
+// Pages
 import Home from './pages/Home/Home';
+import Countries from './pages/Countries/Countries';
+import Quiz from './pages/Quiz/Quiz';
+import NotFound from './pages/NotFound/NotFound';
 // Styles
 import { GlobalStyle } from './GlobalStyle';
 import { Container } from './App.styled';
+// Router
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App: React.FC = () => {
   return (
     <Container>
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/countries" element={<Countries />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
       <GlobalStyle />
     </Container>
   );
