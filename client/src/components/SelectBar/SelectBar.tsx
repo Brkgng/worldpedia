@@ -4,6 +4,8 @@ import { SelectBarStyled } from './SelectBar.styled';
 
 export interface Props {
   defaultValue?: string;
+  value?: string;
+  onChange: React.ChangeEventHandler<HTMLSelectElement>;
   width?: string;
   height?: string;
   borderColor?: string;
@@ -14,6 +16,8 @@ export interface Props {
 const SelectBar: React.FC<Props> = ({
   children,
   defaultValue,
+  value,
+  onChange,
   width,
   height,
   borderColor,
@@ -23,6 +27,8 @@ const SelectBar: React.FC<Props> = ({
   return (
     <SelectBarStyled
       defaultValue={defaultValue}
+      value={value}
+      onChange={(e) => onChange(e)}
       width={width}
       height={height}
       borderColor={borderColor}

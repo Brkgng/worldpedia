@@ -1,9 +1,12 @@
 import React from 'react';
 // Style
-import { SearchBarStyled } from './SearchBar.styled';
+import { Wrapper, SearchBarStyled, Icon } from './SearchBar.styled';
+// Icon
+import searchIcon from '../../assets/search.png';
 
 export interface Props {
   value?: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   width?: string;
   height?: string;
@@ -14,6 +17,7 @@ export interface Props {
 
 const SearchBar: React.FC<Props> = ({
   value,
+  onChange,
   placeholder,
   width,
   height,
@@ -22,15 +26,19 @@ const SearchBar: React.FC<Props> = ({
   fontSize
 }) => {
   return (
-    <SearchBarStyled
-      placeholder={placeholder}
-      width={width}
-      height={height}
-      borderColor={borderColor}
-      borderRadius={borderRadius}
-      fontSize={fontSize}
-      value={value}
-    />
+    <Wrapper>
+      <SearchBarStyled
+        placeholder={placeholder}
+        width={width}
+        height={height}
+        borderColor={borderColor}
+        borderRadius={borderRadius}
+        fontSize={fontSize}
+        value={value}
+        onChange={onChange}
+      />
+      <Icon src={searchIcon} alt="" />
+    </Wrapper>
   );
 };
 

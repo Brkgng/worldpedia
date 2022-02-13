@@ -1,14 +1,28 @@
 import React from 'react';
+// Components
+import Button from '../Button/Button';
 // Styles
-import { Wrapper, Logo } from './Navbar.styled';
+import { NavLink, Wrapper, Logo } from './Navbar.styled';
 // Image
 import logo from '../../assets/logo.png';
 
-const Navbar: React.FC = () => {
+interface Props {
+  buttonActive?: boolean;
+  buttonText?: string;
+}
+
+const Navbar: React.FC<Props> = ({ buttonActive = false, buttonText }) => {
   return (
     <Wrapper>
-      <Logo src={logo} alt="Logo" />
-      <h1>Worldpedia</h1>
+      <NavLink to={'/'}>
+        <Logo src={logo} alt="Logo" />
+        <h1>Worldpedia</h1>
+      </NavLink>
+      {buttonActive && (
+        <Button primary bgColor="#5CB1FF">
+          {buttonText}
+        </Button>
+      )}
     </Wrapper>
   );
 };
