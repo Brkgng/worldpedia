@@ -1,8 +1,20 @@
 import styled from 'styled-components';
+// Route
+import { Link } from 'react-router-dom';
+
+export const NavLink = styled(Link)`
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black);
+  font-size: min(max(2vw, 0.8rem), 1.2rem);
+`;
 
 export const Wrapper = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
   margin-top: 3vh;
 
   h1 {
@@ -13,6 +25,10 @@ export const Wrapper = styled.div`
     h1 {
       margin-left: 10px;
     }
+  }
+
+  button {
+    margin: auto 0;
   }
 `;
 

@@ -16,19 +16,19 @@ const SecondSection: React.FC = () => {
       <BackgroundImg />
       <h1>Hangi kıtadaki ülkeleri incelemek istersin?</h1>
       <Maps>
-        <Link to={'/countries/america'}>
+        <Link to={'countries'} state={{ region: 'Americas' }}>
           <Map src={America} alt="America" />
         </Link>
-        <Link to={'/countries/europe'}>
+        <Link to={'countries'} state={{ region: 'Europe' }}>
           <Map src={Europe} alt="Europe" />
         </Link>
-        <Link to={'countries/asia'}>
+        <Link to={'countries'} state={{ region: 'Asia' }}>
           <Map src={Asia} alt="Asia" />
         </Link>
-        <Link to={'countries/africa'}>
+        <Link to={'countries'} state={{ region: 'Africa' }}>
           <Map src={Africa} alt="Africa" />
         </Link>
-        <Link to={'countries/oceania'}>
+        <Link to={'countries'} state={{ region: 'Oceania' }}>
           <Map src={Oceania} alt="Oceania" />
         </Link>
       </Maps>
