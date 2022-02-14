@@ -12,7 +12,7 @@ interface Props {
 
 const Card: React.FC<Props> = ({ country }) => {
   return (
-    <NavLink to={`${country.fifa}`} target="_blank">
+    <NavLink to={`${country.cioc}`}>
       <CardStyled>
         <Header>
           <h2>{country.name.common}</h2>

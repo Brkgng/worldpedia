@@ -1,19 +1,18 @@
 import axios from "axios";
 
 export const getAllCountries = (req, res) => {
-  console.log(req.baseUrl);
   axios
-    .get("https://restcountries.com/v3.1/subregion/central")
+    .get("https://restcountries.com/v3.1/all")
     .then((countries) => res.status(200).send(countries.data))
-    .catch(() => res.status(404).send("Countries not found."));
+    .catch(() => res.status(404));
 };
 
-export const getCountriesByRegion = (req, res) => {
-  const region = req.params.region;
+export const getCountry = (req, res) => {
+  const code = req.params.code;
   axios
-    .get(`https://restcountries.com/v3.1/region/${region}`)
-    .then((countries) => res.status(200).send(countries.data))
-    .catch(() => res.status(404).send("Countries not found."));
+    .get(`https://restcountries.com/v3.1/alpha/${code}`)
+    .then((country) => res.status(200).send(country.data))
+    .catch(() => res.status(404).send());
 };
 
 export const getCountriesByCurrency = (req, res) => {
@@ -21,5 +20,5 @@ export const getCountriesByCurrency = (req, res) => {
   axios
     .get(`https://restcountries.com/v3.1/currency/${currency}`)
     .then((countries) => res.status(200).send(countries.data))
-    .catch(() => res.status(404).send("Countries not found."));
+    .catch(() => res.status(404));
 };

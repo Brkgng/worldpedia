@@ -2,6 +2,7 @@ import React from 'react';
 // Pages
 import Home from './pages/Home/Home';
 import Countries from './pages/Countries/Countries';
+import Country from './pages/Countries/Country/Country';
 import Quiz from './pages/Quiz/Quiz';
 import NotFound from './pages/NotFound/NotFound';
 // Styles
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/countries" element={<Countries />} />
+          <Route path="/countries/:id" element={<Country />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

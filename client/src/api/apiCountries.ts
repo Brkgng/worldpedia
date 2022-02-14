@@ -7,3 +7,9 @@ export const fetchCountries = async () => {
     await axios(apiEndpoint)
   ).data;
 };
+
+export const fetchCountry = async (code = 'notfound') => {
+  return await (
+    await axios(apiEndpoint + `/${code}`)
+  ).data[0];
+};
