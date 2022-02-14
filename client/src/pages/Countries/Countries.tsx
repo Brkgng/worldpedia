@@ -15,7 +15,7 @@ import {
   UpdateBackgroundColor
 } from './Countries.styled';
 // Get state of Link from "SecondSection.tsx"
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface State {
   region: string;
@@ -27,6 +27,7 @@ const Countries: React.FC = () => {
   const state = location.state as State;
   const [selected, setSelected] = useState(state ? state.region : 'All');
   const [search, setSearch] = useState('');
+  const navigate = useNavigate();
 
   function filterCountriesByRegion() {
     if (selected === 'All') return countries;
@@ -47,7 +48,7 @@ const Countries: React.FC = () => {
 
   return (
     <>
-      <Navbar buttonActive buttonText="Teste başla" />
+      <Navbar buttonActive buttonText="Teste başla" onClick={() => navigate('/quiz')} />
       <Container>
         <BarsContainer>
           <SearchBar
@@ -57,7 +58,6 @@ const Countries: React.FC = () => {
             width="100%"
           />
           <SelectBar
-            defaultValue={'default'}
             value={selected}
             onChange={(e) => setSelected(e.target.value)}
             width="max(20%, 220px)"

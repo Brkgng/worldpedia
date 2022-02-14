@@ -12,8 +12,8 @@ export const useCountryFetch = () => {
     try {
       setLoading(true);
 
-      const countries = await api.fetchCountries();
-      setCountries(countries);
+      const countriesAPI = await api.fetchCountries();
+      setCountries(countriesAPI);
     } catch (error) {
       console.error(error);
     }
