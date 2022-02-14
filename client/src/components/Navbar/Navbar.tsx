@@ -6,20 +6,29 @@ import { NavLink, Wrapper, Logo } from './Navbar.styled';
 // Image
 import logo from '../../assets/logo.png';
 
-interface Props {
+export interface Props {
+  bgColor?: string;
+  shadow?: boolean;
   buttonActive?: boolean;
   buttonText?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Navbar: React.FC<Props> = ({ buttonActive = false, buttonText }) => {
+const Navbar: React.FC<Props> = ({
+  bgColor,
+  shadow,
+  buttonActive = false,
+  buttonText,
+  onClick
+}) => {
   return (
-    <Wrapper>
+    <Wrapper bgColor={bgColor} shadow={shadow}>
       <NavLink to={'/'}>
         <Logo src={logo} alt="Logo" />
         <h1>Worldpedia</h1>
       </NavLink>
       {buttonActive && (
-        <Button primary bgColor="#5CB1FF">
+        <Button onClick={onClick} primary bgColor="#5CB1FF">
           {buttonText}
         </Button>
       )}
