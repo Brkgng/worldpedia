@@ -1,12 +1,14 @@
 import express from "express";
 import cors from "cors";
-import router from "./routes/countries.js";
+import countriesRouter from "./routes/countries.js";
+import questionsRouter from "./routes/questions.js";
 
 // Middleware
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use("/countries", router);
+app.use("/countries", countriesRouter);
+app.use("/questions", questionsRouter);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
