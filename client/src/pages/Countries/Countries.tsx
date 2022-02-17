@@ -41,7 +41,7 @@ const Countries: React.FC = () => {
 
   function getCountries() {
     const filteredCountries = filterCountriesByRegion().filter((country) => {
-      return country.name.common.toLowerCase().startsWith(search);
+      return country.name.common.toLowerCase().startsWith(search.toLowerCase());
     });
     return filteredCountries;
   }
@@ -50,6 +50,7 @@ const Countries: React.FC = () => {
     <>
       <Navbar buttonActive buttonText="Teste başla" onClick={() => navigate('/quiz')} />
       <Container>
+        <h1>{getCountries().length}</h1>
         <BarsContainer>
           <SearchBar
             value={search}

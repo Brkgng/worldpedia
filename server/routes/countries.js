@@ -5,10 +5,10 @@ import {
   getCountriesByCurrency,
 } from "../controllers/countries.js";
 
-const router = express.Router();
+const countriesRouter = express.Router();
 
-router.get("/", getAllCountries);
-router.get("/:code", getCountry);
-router.get("/currency/:currency", getCountriesByCurrency);
+countriesRouter.get("/", getAllCountries);
+countriesRouter.get("/:code", getCountry);
+countriesRouter.get("/currency/:currency", getCountriesByCurrency);
 
-export default router;
+export default countriesRouter;

@@ -12,8 +12,15 @@ export const useCountryFetch = () => {
     try {
       setLoading(true);
 
-      const countriesAPI = await api.fetchCountries();
-      setCountries(countriesAPI);
+      // Check if local storage has countries
+      const countriesStorage = localStorage.getItem('countries');
+      if (countriesStorage) {
+        setCountries(JSON.parse(countriesStorage));
+      } else {
+        const countriesAPI = await api.fetchCountries();
+        setCountries(countriesAPI);
+        localStorage.setItem('countries', JSON.stringify(countriesAPI));
+      }
     } catch (error) {
       console.error(error);
     }
