@@ -11,6 +11,7 @@ export const CardStyled = styled.div`
   border-radius: 5px;
   -moz-outline-radius: 5px;
   cursor: pointer;
+  overflow: hidden;
 
   &:hover {
     outline-color: var(--darkblue);
@@ -52,6 +53,7 @@ export const Header = styled.div`
   @media screen and (max-width: 500px) {
     padding-bottom: 7px;
     margin-bottom: 7px;
+    font-size: 0.8rem;
   }
 `;
 
