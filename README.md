@@ -8,7 +8,8 @@ Questions: https://worldpedia-backend.herokuapp.com/questions
 
 ## Technologies Used 🔧 
 I used React, Context API, Axios, Styled-Components, TypeScript, NodeJS, Express <br>
-Fetched data about countries via [REST countries API](https://restcountries.com/)
+Fetched data about countries via [REST countries API](https://restcountries.com/) <br><br>
+I designed this website on Figma: [Design](https://www.figma.com/file/fCtV6xi61i04GFiNXj1UJR/Untitled?node-id=0%3A1)
 
 ## Setup / Installation: 💻
 ```bash
