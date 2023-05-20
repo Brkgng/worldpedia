@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 // Styles
 import { ButtonStyled } from './Button.styled';
 
@@ -8,6 +8,7 @@ export interface Props {
   width?: number;
   height?: number;
   bgColor?: string;
+  children: ReactNode
 }
 
 const Button: React.FC<Props> = ({ children, onClick, primary, width, height, bgColor }) => {

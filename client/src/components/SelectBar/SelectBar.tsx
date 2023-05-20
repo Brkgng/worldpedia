@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 // Style
 import { SelectBarStyled } from './SelectBar.styled';
 
@@ -11,6 +11,7 @@ export interface Props {
   borderColor?: string;
   borderRadius?: number;
   fontSize?: string;
+  children: ReactNode;
 }
 
 const SelectBar: React.FC<Props> = ({
