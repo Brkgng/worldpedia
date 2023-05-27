@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 // Props
-import { Props } from './SearchBar';
+import { Props } from './SearchBar'
 
 export const SearchBarStyled = styled.input<Props>`
   width: ${({ width }) => width || 'auto'};
@@ -9,12 +9,12 @@ export const SearchBarStyled = styled.input<Props>`
   padding: 5px 0 5px 40px;
   border: 1px solid ${({ borderColor }) => borderColor || 'gray'};
   border-radius: ${({ borderRadius }) => borderRadius || 5}px;
-`;
+`
 
 export const Wrapper = styled.div`
   position: relative;
   width: 100%;
-`;
+`
 
 export const Icon = styled.img`
   position: absolute;
@@ -23,4 +23,4 @@ export const Icon = styled.img`
   left: 10px;
   width: 22px;
   height: 22px;
-`;
+`

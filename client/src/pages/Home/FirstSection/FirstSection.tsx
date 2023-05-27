@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 // Components
-import Button from '../../../components/Button/Button';
-import Circle from '../../../components/Circle/Circle';
+import Button from '../../../components/Button/Button'
+import Circle from '../../../components/Circle/Circle'
 // Styles
-import { Content, Text, Circle3D, World, ButtonWrapper } from './FirstSection.styled';
+import { Content, Text, Circle3D, World, ButtonWrapper } from './FirstSection.styled'
 // Route
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 const FirstSection: React.FC = () => {
-  let navigate = useNavigate();
+  let navigate = useNavigate()
   return (
     <>
       <Circle3D />
@@ -35,7 +35,7 @@ const FirstSection: React.FC = () => {
         </ButtonWrapper>
       </Content>
     </>
-  );
-};
+  )
+}
 
-export default FirstSection;
+export default FirstSection

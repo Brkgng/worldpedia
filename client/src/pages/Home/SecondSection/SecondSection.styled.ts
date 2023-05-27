@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import section2Bg from '../../../assets/section2Bg.svg';
+import styled from 'styled-components'
+import section2Bg from '../../../assets/section2Bg.svg'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -44,7 +44,7 @@ export const Wrapper = styled.div`
       font-size: 1.6rem;
     }
   }
-`;
+`
 
 export const BackgroundImg = styled.div`
   background: url(${section2Bg}) no-repeat;
@@ -67,7 +67,7 @@ export const BackgroundImg = styled.div`
     margin: 0 -2%;
     height: 750px;
   }
-`;
+`
 
 export const Maps = styled.div`
   position: absolute;
@@ -121,7 +121,7 @@ export const Maps = styled.div`
   @media screen and (max-width: 450px) {
     top: 27vh;
   }
-`;
+`
 
 export const Map = styled.img`
   max-height: 250px;
@@ -145,4 +145,4 @@ export const Map = styled.img`
   @media screen and (max-width: 450px) {
     height: 150px;
   }
-`;
+`

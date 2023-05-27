@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   height: max(60vh, 300px);
   margin-bottom: 80px;
   margin-top: 10vh;
-`;
+`
 
 export const Content = styled.div`
   position: relative;
@@ -28,4 +28,4 @@ export const Content = styled.div`
   @media screen and (max-width: 750px) {
     width: 100%;
   }
-`;
+`

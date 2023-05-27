@@ -1,49 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 // Components
-import Navbar from '../../components/Navbar/Navbar';
-import SearchBar from '../../components/SearchBar/SearchBar';
-import SelectBar from '../../components/SelectBar/SelectBar';
-import Card from '../../components/Card/Card';
-import Spinner from '../../components/Spinner/Spinner';
+import Navbar from '../../components/Navbar/Navbar'
+import SearchBar from '../../components/SearchBar/SearchBar'
+import SelectBar from '../../components/SelectBar/SelectBar'
+import Card from '../../components/Card/Card'
+import Spinner from '../../components/Spinner/Spinner'
 // Hooks
-import { useCountryFetch } from '../../hooks/useCountryFetch';
+import { useCountryFetch } from '../../hooks/useCountryFetch'
 // Style
-import {
-  Container,
-  BarsContainer,
-  CardsContainer,
-  UpdateBackgroundColor
-} from './Countries.styled';
+import { Container, BarsContainer, CardsContainer, UpdateBackgroundColor } from './Countries.styled'
 // Get state of Link from "SecondSection.tsx"
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom'
 
 interface State {
-  region: string;
+  region: string
 }
 
 const Countries: React.FC = () => {
-  const { countries, loading } = useCountryFetch();
-  const location = useLocation();
-  const state = location.state as State;
-  const [selected, setSelected] = useState(state ? state.region : 'All');
-  const [search, setSearch] = useState('');
-  const navigate = useNavigate();
+  const { countries, loading } = useCountryFetch()
+  const location = useLocation()
+  const state = location.state as State
+  const [selected, setSelected] = useState(state ? state.region : 'All')
+  const [search, setSearch] = useState('')
+  const navigate = useNavigate()
 
   function filterCountriesByRegion() {
-    if (selected === 'All') return countries;
+    if (selected === 'All') return countries
 
     const filteredByRegion = countries.filter((country) => {
-      return country.region === selected;
-    });
+      return country.region === selected
+    })
 
-    return filteredByRegion;
+    return filteredByRegion
   }
 
   function getCountries() {
     const filteredCountries = filterCountriesByRegion().filter((country) => {
-      return country.name.common.toLowerCase().startsWith(search.toLowerCase());
-    });
-    return filteredCountries;
+      return country.name.common.toLowerCase().startsWith(search.toLowerCase())
+    })
+    return filteredCountries
   }
 
   return (
@@ -78,14 +73,14 @@ const Countries: React.FC = () => {
             <Spinner spinColor="#5cb1ff" />
           ) : (
             getCountries().map((country, key) => {
-              return <Card key={key} country={country} />;
+              return <Card key={key} country={country} />
             })
           )}
         </CardsContainer>
         <UpdateBackgroundColor />
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default Countries;
+export default Countries

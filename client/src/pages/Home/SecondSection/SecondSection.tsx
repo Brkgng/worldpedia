@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 // Styles
-import { Wrapper, BackgroundImg, Maps, Map } from './SecondSection.styled';
+import { Wrapper, BackgroundImg, Maps, Map } from './SecondSection.styled'
 // Images
-import America from '../../../assets/maps/America.svg';
-import Europe from '../../../assets/maps/Europe.svg';
-import Asia from '../../../assets/maps/Asia.svg';
-import Africa from '../../../assets/maps/Africa.svg';
-import Oceania from '../../../assets/maps/Oceania.svg';
+import America from '../../../assets/maps/America.svg'
+import Europe from '../../../assets/maps/Europe.svg'
+import Asia from '../../../assets/maps/Asia.svg'
+import Africa from '../../../assets/maps/Africa.svg'
+import Oceania from '../../../assets/maps/Oceania.svg'
 // Route
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const SecondSection: React.FC = () => {
   return (
@@ -33,7 +33,7 @@ const SecondSection: React.FC = () => {
         </Link>
       </Maps>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default SecondSection;
+export default SecondSection

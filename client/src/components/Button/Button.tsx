@@ -1,13 +1,13 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from 'react'
 // Styles
-import { ButtonStyled } from './Button.styled';
+import { ButtonStyled } from './Button.styled'
 
 export interface Props {
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  primary: boolean;
-  width?: number;
-  height?: number;
-  bgColor?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
+  primary: boolean
+  width?: number
+  height?: number
+  bgColor?: string
   children: ReactNode
 }
 
@@ -22,7 +22,7 @@ const Button: React.FC<Props> = ({ children, onClick, primary, width, height, bg
     >
       {children}
     </ButtonStyled>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

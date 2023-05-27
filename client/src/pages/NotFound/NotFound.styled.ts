@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Icon = styled.img`
   position: absolute;
@@ -9,4 +9,4 @@ export const Icon = styled.img`
   height: auto;
   max-width: 663px;
   max-height: 500px;
-`;
+`

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Props } from './Circle';
+import styled from 'styled-components'
+import { Props } from './Circle'
 
 const CircleStyled = styled.span<Props>`
   position: absolute;
@@ -18,6 +18,6 @@ const CircleStyled = styled.span<Props>`
     height: ${(props) => `calc(${props.size}px - 30px)`};
     width: ${(props) => `calc(${props.size}px - 30px)`};
   }
-`;
+`
 
-export default CircleStyled;
+export default CircleStyled

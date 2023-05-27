@@ -1,39 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 // Components
-import Navbar from '../../../components/Navbar/Navbar';
-import Spinner from '../../../components/Spinner/Spinner';
-import NotFound from '../../NotFound/NotFound';
+import Navbar from '../../../components/Navbar/Navbar'
+import Spinner from '../../../components/Spinner/Spinner'
+import NotFound from '../../NotFound/NotFound'
 // Styles
-import { Content, Details, Flag, Gray, ListContainer, NavLink } from './Country.styled';
-import { UpdateBackgroundColor } from '../Countries.styled';
+import { Content, Details, Flag, Gray, ListContainer, NavLink } from './Country.styled'
+import { UpdateBackgroundColor } from '../Countries.styled'
 // API
-import * as api from '../../../api/apiCountries';
-import { ICountry } from '../../../interfaces/country';
+import * as api from '../../../api/apiCountries'
+import { ICountry } from '../../../interfaces/country'
 // Router
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom'
 
 const Country: React.FC = () => {
-  const params = useParams();
-  const navigate = useNavigate();
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [country, setCountry] = useState<ICountry>();
+  const params = useParams()
+  const navigate = useNavigate()
+  const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [country, setCountry] = useState<ICountry>()
 
   useEffect(() => {
     const fetchCountry = async () => {
       try {
-        setError(false);
-        setLoading(true);
-        const countryAPI = await api.fetchCountry(params.id);
-        setCountry(countryAPI);
+        setError(false)
+        setLoading(true)
+        const countryAPI = await api.fetchCountry(params.id)
+        setCountry(countryAPI)
       } catch (error) {
-        console.error(error);
-        setError(true);
+        console.error(error)
+        setError(true)
       }
-      setLoading(false);
-    };
-    fetchCountry();
-  }, [params.id]);
+      setLoading(false)
+    }
+    fetchCountry()
+  }, [params.id])
 
   return (
     <>
@@ -72,7 +72,7 @@ const Country: React.FC = () => {
                   <Gray>Dil: </Gray>
                   {country?.languages &&
                     Object.values(country.languages).map((language, key) => {
-                      return <span key={key}>{language}</span>;
+                      return <span key={key}>{language}</span>
                     })}
                 </ListContainer>
               </h2>
@@ -107,7 +107,7 @@ const Country: React.FC = () => {
                       <NavLink key={key} href={`${border}`}>
                         {border}
                       </NavLink>
-                    );
+                    )
                   })}
                 </ListContainer>
               </h2>
@@ -118,7 +118,7 @@ const Country: React.FC = () => {
       </Content>
       <UpdateBackgroundColor />
     </>
-  );
-};
+  )
+}
 
-export default Country;
+export default Country

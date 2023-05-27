@@ -1,40 +1,40 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from 'react'
 // Hooks
-import { useQuestionFetch } from '../../../hooks/useQuestionFetch';
+import { useQuestionFetch } from '../../../hooks/useQuestionFetch'
 // Context
-import { QuizContext } from '../../../helpers/Contexts';
+import { QuizContext } from '../../../helpers/Contexts'
 // Styles
-import { Title, Option, Options, Button, Bold, QuestionInfo } from './Playing.styled';
-import { Content } from '../Quiz.styled';
+import { Title, Option, Options, Button, Bold, QuestionInfo } from './Playing.styled'
+import { Content } from '../Quiz.styled'
 
 const Playing: React.FC = () => {
-  const { setGameState, setScore } = useContext(QuizContext);
-  const { questions, currQuestion, setCurrQuestion } = useQuestionFetch();
-  const [disableOption, setDisableOption] = useState({ A: false, B: false, C: false, D: false });
-  const [selected, setSelected] = useState({ A: '', B: '', C: '', D: '' });
+  const { setGameState, setScore } = useContext(QuizContext)
+  const { questions, currQuestion, setCurrQuestion } = useQuestionFetch()
+  const [disableOption, setDisableOption] = useState({ A: false, B: false, C: false, D: false })
+  const [selected, setSelected] = useState({ A: '', B: '', C: '', D: '' })
 
   const checkAnswer = (selectedAnswer: string, option: string) => {
     if (questions[currQuestion].answer === selectedAnswer) {
       // Add points if the user has answered the question correctly at the first time
       if (Object.values(disableOption).every((option) => option === false))
-        setScore((prev) => prev + 1);
-      setSelected((prev) => ({ ...prev, [option]: 'correct' }));
-      setDisableOption({ A: true, B: true, C: true, D: true });
+        setScore((prev) => prev + 1)
+      setSelected((prev) => ({ ...prev, [option]: 'correct' }))
+      setDisableOption({ A: true, B: true, C: true, D: true })
     } else {
-      setSelected((prev) => ({ ...prev, [option]: 'wrong' }));
-      setDisableOption((prev) => ({ ...prev, [option]: true }));
+      setSelected((prev) => ({ ...prev, [option]: 'wrong' }))
+      setDisableOption((prev) => ({ ...prev, [option]: true }))
     }
-  };
+  }
 
   const nextQuestion = () => {
-    setCurrQuestion((prev) => prev + 1);
-    setSelected({ A: '', B: '', C: '', D: '' });
-    setDisableOption({ A: false, B: false, C: false, D: false });
-  };
+    setCurrQuestion((prev) => prev + 1)
+    setSelected({ A: '', B: '', C: '', D: '' })
+    setDisableOption({ A: false, B: false, C: false, D: false })
+  }
 
   const showResults = () => {
-    setGameState('result');
-  };
+    setGameState('result')
+  }
 
   return (
     <>
@@ -85,7 +85,7 @@ const Playing: React.FC = () => {
         </>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Playing;
+export default Playing

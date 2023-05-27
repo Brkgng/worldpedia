@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 // Style
-import { CardStyled, NavLink, Header, Content, Icon } from './Card.styled';
+import { CardStyled, NavLink, Header, Content, Icon } from './Card.styled'
 // Icon
-import clickIcon from '../../assets/click.png';
+import clickIcon from '../../assets/click.png'
 // Interface
-import { ICountry } from '../../interfaces/country';
+import { ICountry } from '../../interfaces/country'
 
 interface Props {
-  country: ICountry;
+  country: ICountry
 }
 
 const Card: React.FC<Props> = ({ country }) => {
@@ -32,7 +32,7 @@ const Card: React.FC<Props> = ({ country }) => {
         <Icon src={clickIcon} alt="Icon" />
       </CardStyled>
     </NavLink>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

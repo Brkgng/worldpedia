@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Props } from './Spinner';
+import styled from 'styled-components'
+import { Props } from './Spinner'
 
 export const SpinnerStyled = styled.div<Props>`
   height: ${(props) => props.size || 50}px;
@@ -18,4 +18,4 @@ export const SpinnerStyled = styled.div<Props>`
       transform: rotate(360deg);
     }
   }
-`;
+`

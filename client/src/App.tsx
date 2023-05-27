@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 // Pages
-import Home from './pages/Home/Home';
-import Countries from './pages/Countries/Countries';
-import Country from './pages/Countries/Country/Country';
-import Quiz from './pages/Quiz/Quiz';
-import NotFound from './pages/NotFound/NotFound';
+import Home from './pages/Home/Home'
+import Countries from './pages/Countries/Countries'
+import Country from './pages/Countries/Country/Country'
+import Quiz from './pages/Quiz/Quiz'
+import NotFound from './pages/NotFound/NotFound'
 // Styles
-import { GlobalStyle } from './GlobalStyle';
-import { Container } from './App.styled';
+import { GlobalStyle } from './GlobalStyle'
+import { Container } from './App.styled'
 // Router
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 const App: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ const App: React.FC = () => {
       </BrowserRouter>
       <GlobalStyle />
     </Container>
-  );
-};
+  )
+}
 
-export default App;
+export default App

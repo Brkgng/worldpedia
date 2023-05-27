@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { Props } from './Button';
+import styled, { css } from 'styled-components'
+import { Props } from './Button'
 
 export const ButtonStyled = styled.button<Props>`
   border-radius: 5px;
@@ -25,4 +25,4 @@ export const ButtonStyled = styled.button<Props>`
   @media screen and (max-width: 500px) {
     width: ${({ width }) => (width ? `calc(${width} - 40px)` : '160px')};
   }
-`;
+`

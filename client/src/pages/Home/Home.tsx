@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 // Components
-import Navbar from '../../components/Navbar/Navbar';
-import FirstSection from './FirstSection/FirstSection';
-import SecondSection from './SecondSection/SecondSection';
+import Navbar from '../../components/Navbar/Navbar'
+import FirstSection from './FirstSection/FirstSection'
+import SecondSection from './SecondSection/SecondSection'
 
 const Home: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const Home: React.FC = () => {
       <FirstSection />
       <SecondSection />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

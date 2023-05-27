@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 // Components
-import Button from '../Button/Button';
+import Button from '../Button/Button'
 // Styles
-import { NavLink, Wrapper, Logo } from './Navbar.styled';
+import { NavLink, Wrapper, Logo } from './Navbar.styled'
 // Image
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.png'
 
 export interface Props {
-  bgColor?: string;
-  shadow?: boolean;
-  buttonActive?: boolean;
-  buttonText?: string;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  bgColor?: string
+  shadow?: boolean
+  buttonActive?: boolean
+  buttonText?: string
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
 const Navbar: React.FC<Props> = ({
@@ -33,7 +33,7 @@ const Navbar: React.FC<Props> = ({
         </Button>
       )}
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

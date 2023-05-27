@@ -1,17 +1,17 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from 'react'
 // Style
-import { SelectBarStyled } from './SelectBar.styled';
+import { SelectBarStyled } from './SelectBar.styled'
 
 export interface Props {
-  defaultValue?: string;
-  value?: string;
-  onChange: React.ChangeEventHandler<HTMLSelectElement>;
-  width?: string;
-  height?: string;
-  borderColor?: string;
-  borderRadius?: number;
-  fontSize?: string;
-  children: ReactNode;
+  defaultValue?: string
+  value?: string
+  onChange: React.ChangeEventHandler<HTMLSelectElement>
+  width?: string
+  height?: string
+  borderColor?: string
+  borderRadius?: number
+  fontSize?: string
+  children: ReactNode
 }
 
 const SelectBar: React.FC<Props> = ({
@@ -38,7 +38,7 @@ const SelectBar: React.FC<Props> = ({
     >
       {children}
     </SelectBarStyled>
-  );
-};
+  )
+}
 
-export default SelectBar;
+export default SelectBar

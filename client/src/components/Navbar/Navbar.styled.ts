@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
-import { Props } from './Navbar';
+import styled, { css } from 'styled-components'
+import { Props } from './Navbar'
 // Route
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export const NavLink = styled(Link)`
   display: flex;
@@ -10,7 +10,7 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   color: var(--black);
   font-size: min(max(2vw, 0.8rem), 1.2rem);
-`;
+`
 
 export const Wrapper = styled.div<Props>`
   display: flex;
@@ -39,7 +39,7 @@ export const Wrapper = styled.div<Props>`
   button {
     margin: auto 0;
   }
-`;
+`
 
 export const Logo = styled.img`
   width: 70px;
@@ -50,4 +50,4 @@ export const Logo = styled.img`
     width: 50px;
     height: 50px;
   }
-`;
+`

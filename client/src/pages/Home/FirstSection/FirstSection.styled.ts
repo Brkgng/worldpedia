@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import world from '../../../assets/world.png';
-import circle3d from '../../../assets/circle3d.png';
+import styled from 'styled-components'
+import world from '../../../assets/world.png'
+import circle3d from '../../../assets/circle3d.png'
 
 export const Content = styled.div`
   max-width: 600px;
@@ -13,7 +13,7 @@ export const Content = styled.div`
   @media screen and (max-width: 1176px) {
     margin-top: 6vh;
   }
-`;
+`
 
 export const Text = styled.div`
   margin-bottom: 30px;
@@ -52,13 +52,13 @@ export const Text = styled.div`
       font-size: var(--fontMed);
     }
   }
-`;
+`
 
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 550px;
-`;
+`
 
 export const Circle3D = styled.div`
   background: url(${circle3d}) no-repeat;
@@ -86,7 +86,7 @@ export const Circle3D = styled.div`
     width: 100px;
     height: 100px;
   }
-`;
+`
 
 export const World = styled.div`
   position: absolute;
@@ -114,4 +114,4 @@ export const World = styled.div`
   @media screen and (max-width: 980px) {
     display: none;
   }
-`;
+`

@@ -1,18 +1,18 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 9px;
   padding-bottom: 5px;
   border-bottom: 1px solid gray;
-`;
+`
 
 export const Options = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   margin-top: 25px;
-`;
+`
 
 export const Option = styled.button<{ selected: string }>`
   flex-grow: 1;
@@ -33,13 +33,13 @@ export const Option = styled.button<{ selected: string }>`
     color: var(--black);
     opacity: ${({ selected }) => (selected === 'correct' ? 1 : 0.7)};
   }
-`;
+`
 
 export const QuestionInfo = styled.p`
   position: absolute;
   top: 10px;
   left: 20px;
-`;
+`
 
 export const Button = styled.button`
   width: 150px;
@@ -55,8 +55,8 @@ export const Button = styled.button`
   @media screen and (min-width: 1400px) {
     margin-top: 20px;
   }
-`;
+`
 
 export const Bold = styled.span`
   font-weight: bold;
-`;
+`

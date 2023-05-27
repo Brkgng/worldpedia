@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 	:root {
@@ -20,4 +20,4 @@ export const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		font-family: "Quicksand", sans-serif;
 	}
-`;
+`

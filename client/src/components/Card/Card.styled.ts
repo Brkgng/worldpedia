@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 // Route
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export const CardStyled = styled.div`
   position: relative;
@@ -26,7 +26,7 @@ export const CardStyled = styled.div`
   @media screen and (max-width: 500px) {
     width: 160px;
   }
-`;
+`
 
 export const Header = styled.div`
   display: flex;
@@ -55,7 +55,7 @@ export const Header = styled.div`
     margin-bottom: 7px;
     font-size: 0.8rem;
   }
-`;
+`
 
 export const Content = styled.div`
   display: flex;
@@ -67,7 +67,7 @@ export const Content = styled.div`
   @media screen and (max-width: 611px) {
     row-gap: 5px;
   }
-`;
+`
 
 export const Icon = styled.img`
   position: absolute;
@@ -82,9 +82,9 @@ export const Icon = styled.img`
     bottom: 5px;
     right: 5px;
   }
-`;
+`
 
 export const NavLink = styled(Link)`
   text-decoration: none;
   color: inherit;
-`;
+`

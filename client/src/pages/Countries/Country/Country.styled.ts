@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Content = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ export const Content = styled.div`
     flex-direction: column-reverse;
     align-items: center;
   }
-`;
+`
 
 export const Details = styled.div`
   display: flex;
@@ -26,11 +26,11 @@ export const Details = styled.div`
   @media screen and (max-width: 700px) {
     font-size: 0.8rem;
   }
-`;
+`
 
 export const Gray = styled.span`
   color: #4f4f4f;
-`;
+`
 
 export const Flag = styled.img`
   width: 100%;
@@ -48,7 +48,7 @@ export const Flag = styled.img`
   @media screen and (max-width: 700px) {
     margin-bottom: 15px;
   }
-`;
+`
 
 export const ListContainer = styled.div`
   display: flex;
@@ -59,8 +59,8 @@ export const ListContainer = styled.div`
   span:not(:last-child):not(:first-child):after {
     content: ',';
   }
-`;
+`
 
 export const NavLink = styled.a`
   text-decoration: none;
-`;
+`
